@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() { // entry point of the file
@@ -6,25 +7,22 @@ void main() { // entry point of the file
   // MyApp() is a widget
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatelessWidget{
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    return  MaterialApp(
+
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('My first app Bar'),
-          backgroundColor: Colors.blueAccent,
-        ),
-        body: const Center(
-          child: Text(
-            'Hello flutter',
-            style: TextStyle(fontSize: 12),
-          ),
-        ),
+        backgroundColor: Colors.grey[400],
+        body: ListView.builder( 
+          itemCount: 20,
+          itemBuilder: (context,index) => ListTile(
+            textColor: Colors.black,
+            title: Text(index.toString()),
+          ))
       ),
     );
   }
