@@ -2,6 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'widgets/horizontal_names_list.dart';
 import 'widgets/vertical_names_list.dart';
+import 'widgets/grid_view.dart';
+import 'widgets/stack_trial.dart';
+import 'widgets/test.dart';
 
 void main() { // entry point of the file
   runApp(MyApp());
@@ -20,7 +23,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-       body: HorizontalNamesList(),
+       body: TrialOne(),
       ),
     );
   }
